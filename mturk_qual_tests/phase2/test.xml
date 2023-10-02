@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuestionForm xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd">
+	<Overview>
+		<Title>Tweet Follow-Up Generation Qualification</Title>
+		<Text>
+			Thank you for your interest in the tweet follow-up generation task.
+			This qualification test will explain the task format to avoid common pitfalls.
+			The test will be scored automatically. Therefore, you may work on the HIT immediately if you score high enough.
+			Please read the task instructions below carefully and answer the questions correctly to proceed.
+			If you fail the test, you will not be able to repeat it for several days.
+		</Text>
+		<Title>Input</Title>
+		<FormattedContent><![CDATA[
+			In each HIT, you are shown a tweet (the &quot;<strong>Context Tweet</strong>&quot;), together with its &quot;<strong>Expected Lifetime</strong>&quot;.
+			We label this tweet the context tweet because it provides context for the author's intents, actions, or beliefs.
+			Each context tweet has time-sensitive information, that is, information expected to be relevant only for a certain amount of time.
+			The &quot;expected lifetime&quot; annotation indicates how long a reader might expect the context tweet to contain relevant information.
+			This lifetime may refer to ongoing or planned actions or events in the tweet
+			(such as &quot;<em>I am reading a few short stories.</em>&quot; or &quot;<em>I will pick up my nephew from the game later.</em>&quot;)
+			or general information that will become outdated in the future
+			(such as &quot;<em>The weather is nice today.</em>&quot; or &quot;<em>This week is going great!</em>&quot;).
+		]]></FormattedContent>
+		<Title>Task</Title>
+		<FormattedContent><![CDATA[
+			Your task for each context tweet is to write several <strong>follow-up tweets</strong> that the author could have respectively followed up on the context tweet with.
+			Each follow-up tweet you write should affect the lifetime of information in the <strong>context tweet</strong> in a specific way.
+		]]></FormattedContent>
+		<FormattedContent><![CDATA[
+			Each HIT requires you to write three follow-up tweets:
+			<ul>
+				<li>One where the expected lifetime of information in the context tweet <strong>decreases</strong>.</li>
+				<li>One where the expected lifetime of information in the context tweet <strong>remains unchanged</strong>.</li>
+				<li>One where the expected lifetime of information in the context tweet <strong>increases</strong>.</li>
+			</ul>
+			For the follow-up tweet with an <strong>unchanged lifetime</strong>, you should think of a tweet
+			that still <strong>relates to</strong> the context tweet but does not change its expected information lifetime.
+			In the other two cases, the follow-up tweet should directly affect the expected lifetime of the context tweet.
+		]]></FormattedContent>
+		<FormattedContent><![CDATA[
+			For follow-up tweets that change the expected lifetime, you must also provide an estimate for how long
+			the context tweet contains relevant information after considering the corresponding follow-up tweet.
+			This estimate must be selected from a set of classes. Keep in mind that <strong>the new estimate you provide may not
+			be the same as the original one.</strong>
+		]]></FormattedContent>
+		<Title>Example</Title>
+		<FormattedContent><![CDATA[
+			Let's look at a concrete example. Consider the following input:
+			<ul>
+				<li> Context Tweet: &quot;<em>Never thought I'd be in the capital. But here I am. Waiting for a train in DC</em>&quot;</li>
+				<li> Expected Lifetime: 15-45 minutes</li>
+			</ul>
+			In this case, the main information in the context tweet is that the author is waiting on a train. We estimate this information
+			is valid for <em>15-45 minutes</em> (i.e., after 45 minutes, we would not assume the author is still waiting on the train based
+			on this tweet alone).
+		]]></FormattedContent>
+		<FormattedContent><![CDATA[
+			One way to change the expected lifetime of the tweet is to add additional information through the follow-up tweet.
+			For example, to <strong>decrease</strong> the duration for which the tweet is relevant,
+			we could specify that the train is expected to arrive very soon:
+			<ul>
+				<li> Follow-up with decreased lifetime: &quot;<em>It's only a short wait, though. The train should arrive any minute now.</em>&quot;</li>
+				<li> (New) expected lifetime: 5-15 minutes</li>
+			</ul>
+			When reading this follow-up tweet after the context tweet, a reader is more likely to assume a duration of <em>5-15 minutes</em> for the wait rather than
+			the previously estimated <em>15-45 minutes</em>.
+		]]></FormattedContent>
+		<FormattedContent><![CDATA[
+			Your follow-up tweet may also imply a change of plans, expectations, or intentions. For example, a typical method to increase the
+			duration for which a tweet is relevant is to inform readers about a delay. To <strong>increase</strong> the expected lifetime, a possible
+			follow-up could be:
+			<ul>
+				<li> Follow-up with increased lifetime: &quot;<em>They just announced a huge delay. Might as well go grab some food, I'm not getting out of here any time soon.</em>&quot;</li>
+				<li> (New) expected lifetime: 2-6 hours</li>
+			</ul>
+			This specific follow-up tweet implies a relatively long delay. Note that the new expected lifetime may be any class that fits the criteria (increased/decreased lifetime) but may <strong>not</strong> be the same as the original estimate.
+			Thus, it would also	be possible to imply that there is a shorter delay (as long as the new expected lifetime would exceed 45 minutes) or even provide a follow-up that increases the expected lifetime further.
+			Another possible solution could be:
+			<ul>
+				<li> Follow-up with increased lifetime: &quot;<em>This city is really breathtaking. I've decided to stay the night here before leaving.</em>&quot;</li>
+				<li> (New) expected lifetime: 1-3 days</li>
+			</ul>
+			Please, feel free to come up with creative and varied solutions.
+		]]></FormattedContent>
+		<FormattedContent><![CDATA[
+			Finally, for the follow-up tweet with an <strong>unchanged</strong> lifetime, ensure that the follow-up tweet you write is still <strong>relevant</strong> to the context tweet.
+			A completely unrelated follow-up is not considered an appropriate solution. Instead, write a tweet that talks about the same topic or situation but does not change
+			for how long a reader would consider the context tweet to be relevant. In our example, such a follow-up tweet could be:
+			<ul>
+				<li> Follow-up with unchanged lifetime: &quot;<em>The train station looks really nice. I wonder if they renovated it recently?</em>&quot;</li>
+			</ul>
+			No new expected lifetime needs to be provided here, as it is not expected to change from the original estimate.
+		]]></FormattedContent>
+		<Title>Correctly Estimating The Updated Lifetime</Title>
+		<FormattedContent><![CDATA[
+			Understanding the concept of the lifetime estimate is essential to avoid errors.
+			When estimating the expected lifetime of a tweet pair, your task is to estimate the duration between the time the <strong>context tweet</strong>
+			was posted and the time the <strong>context tweet</strong> is no longer considered relevant.
+			The follow-up tweet only provides further details for this estimate but is not itself a part of it.
+		]]></FormattedContent>
+		<FormattedContent><![CDATA[
+			Let's look at an example:
+			<ul>
+				<li> Context Tweet: &quot;<em>I am waiting on a phone call, it should come through in the next 2 hours</em>&quot;</li>
+				<li> Expected Lifetime: 45 minutes - 2 hours</li>
+			</ul>
+			Now consider the following follow-up tweet:
+			<ul>
+				<li> Follow-up with decreased lifetime: &quot;<em>There's the call already!</em>&quot;</li>
+			</ul>
+			Commonly, workers would annotate such a tweet with a lifetime of &quot;less than one minute&quot;. However, remember
+			that the expected lifetime is always measured from the time the <strong>context tweet</strong> was posted. Thus, this expected lifetime
+			implies that the phone call occurred less than one minute after the <strong>context tweet</strong> was posted.
+			Note that the duration of the call itself and the duration of the author taking the call are not relevant here. Only the time for which the information &quot;I am waiting on a phone call&quot; is relevant matters.
+			Thus, a lifetime of &quot;less than one minute&quot; is a possible annotation, although not very likely. A better annotation would be &quot;5-15 minutes&quot; or &quot;15-45 minutes&quot;
+		]]></FormattedContent>
+		<FormattedContent><![CDATA[
+			Sometimes, a context tweet may contain several pieces of information, such as the following:
+			<ul>
+				<li> Context Tweet: &quot;<em>I'll take a nap and then do the dishes.</em>&quot;</li>
+				<li> Expected Lifetime: 45 minutes - 2 hours</li>
+			</ul>
+			In this case, the following solution would be <strong>incorrect</strong>:
+			<ul>
+				<li> Follow-up with decreased lifetime: &quot;<em>That was a power nap. Now I'm ready to tackle those plates.</em>&quot;</li>
+				<li> (New) expected lifetime: 1-5 minutes</li>
+			</ul>
+			Here, it is clear that the full duration of taking a nap <strong>and</strong> doing the dishes should be longer than 5 minutes.
+			While only doing the dishes may take less than 5 minutes, the context tweet also mentions taking a nap. As mentioned,
+			the lifetime estimate encompasses the entire duration for which the context tweet is relevant.
+		]]></FormattedContent>
+		<Title>
+			Guidelines
+		</Title>
+		<FormattedContent><![CDATA[
+			<p>
+				<strong>Do not submit an altered version of the context tweet.</strong><br />
+				A common error source is workers attempting to change the context tweet itself. As shown in the example,
+				your task is to write <strong>follow-up tweets</strong> to the context tweet.
+				As a guideline, imagine you are the author of the context tweet and are trying to
+				write a follow-up to communicate an update or further information to your audience.
+				Additionally, <strong>each follow-up tweet</strong> should be considered independent of the others
+				(one tweet pair consists of the context tweet and a single follow-up tweet).
+			</p>
+
+			<p>
+				<strong>Follow-up tweets that change the lifetime may not produce the same expected lifetime estimate.</strong><br />
+				For follow-up tweets that should decrease or increase the expected lifetime of the context tweet, the resulting
+				estimate you provide must be a <strong>different class</strong> from the original expected lifetime. For example,
+				if the original expected lifetime is &quot;15-45 minutes&quot;, your follow-up tweet that increases the lifetime
+				must result in an estimated lifetime of <strong>at least</strong> &quot;45 minutes - 2 hours&quot;. For the
+				follow-up that decreases the lifetime, the updated estimate must be <strong>at most</strong> &quot;5-15 minutes&quot;.
+			</p>
+
+			<p>
+				<strong>The goal is to change the lifetime of information in the context tweet.</strong><br />
+				Another common misconception is that the updated lifetime annotation is for both the context- and the
+				follow-up tweet, especially when trying to increase the information lifetime.
+				However, the expected lifetime <strong>always</strong> refers to the <strong>context tweet only</strong>.
+				In our example, a follow-up tweet such as &quot;<em>After taking the train, I will go to the cinema.</em>&quot;
+				would be unsuitable since the lifetime of information in the context tweet does not change.
+			</p>
+
+			<p>
+				<strong>When the context tweet is unclear, give your best effort.</strong><br />
+				Sourced tweets may sometimes be written in colloquial or unclear language.
+				If you think the context tweet uses unclear language, make a best-effort attempt at solving the task.
+				However, simply submitting a follow-up such as &quot;<em>can't think of something</em>&quot;
+				or &quot;<em>unclear context tweet</em>&quot; is not acceptable and will be rejected.
+			</p>
+
+			<p>
+				<strong>Try to avoid using explicit temporal expressions.</strong><br />
+				Where possible, try to avoid using explicit temporal expressions altogether and instead use implicit temporal frames of reference
+				(e.g., other actions or events humans can relate to specific durations via common sense).
+				You may still use temporal expressions to write your follow-up tweets. However, avoid follow-ups such as
+				&quot;<em>I am waiting for the train for a few hours</em>&quot;, which simply state the action's duration without further context.
+				A pattern of low-effort submissions can result in a revocation of your qualification or even rejections.
+			</p>
+
+			<p>
+				<strong>Be creative.</strong><br />
+				This task is effectively a creative writing task. Our goal is to collect a wide variety of reasons why the information lifetime
+				of text may decrease or increase. Try to write varied follow-up tweets with different scenarios that change the expected information lifetime.
+			</p>
+		]]></FormattedContent>
+		<Title>
+			Qualification Test
+		</Title>
+		<Text>
+			This test contains ten multiple-choice questions that confirm your understanding of the task.
+			You must answer all ten questions correctly to work on the task.
+
+			In the first five questions, a context tweet and a follow-up tweet are provided.
+			Your task is to answer whether the follow-up tweet follows the task description and guidelines.
+
+			In the latter five questions, a context tweet and a follow-up tweet are provided.
+			Your task is to select the correct updated lifetime estimate for the pair of tweets.
+		</Text>
+	</Overview>
+	<Question>
+		<QuestionIdentifier>0</QuestionIdentifier>
+		<QuestionContent>
+			<Title>Question 1</Title>
+			<Text>
+				Does the provided follow-up tweet conform to the task description?
+
+				Context tweet: &quot;Thank you G! Wedding gig tomorrow&quot;
+				Expected lifetime: 1-3 days
+				Follow-up with decreased lifetime: &quot;I'm rehearsing for an hour to prepare for my gig.&quot;
+			</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>0</SelectionIdentifier>
+						<Text>Yes, the follow-up tweet conforms to the task description.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>No, the follow-up tweet does not conform to the task description.</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>1</QuestionIdentifier>
+		<QuestionContent>
+			<Title>Question 2</Title>
+			<Text>
+				Does the provided follow-up tweet conform to the task description?
+
+				Context tweet: &quot;I am going wedding dress shopping this weekend and I am not ready&quot;
+				Expected lifetime: 3-7 days
+				Follow-up with increased lifetime: &quot;I'm gonna postpone my dress shopping until I've done more thinking about it. This weekend ain't happening...&quot;
+			</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>0</SelectionIdentifier>
+						<Text>Yes, the follow-up tweet conforms to the task description.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>No, the follow-up tweet does not conform to the task description.</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>2</QuestionIdentifier>
+		<QuestionContent>
+			<Title>Question 3</Title>
+			<Text>
+				Does the provided follow-up tweet conform to the task description?
+
+				Context tweet: &quot;Just dropped my son off so you know that means time to workout.&quot;
+				Expected lifetime: 45 minutes - 2 hours
+				Follow-up with increased lifetime: &quot;I'm dropping off my son in a few hours, then I will have time to work out.&quot;
+			</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>0</SelectionIdentifier>
+						<Text>Yes, the follow-up tweet conforms to the task description.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>No, the follow-up tweet does not conform to the task description.</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>3</QuestionIdentifier>
+		<QuestionContent>
+			<Title>Question 4</Title>
+			<Text>
+				Does the provided follow-up tweet conform to the task description?
+
+				Context tweet: &quot;taking off for tonight to see family. first time back since pre-covid. can't wait&quot;
+				Expected lifetime: More than 6 hours
+				Follow-up with increased lifetime: &quot;Had a good time with the fam. going out with Jason from accounting after work tomorrow.&quot;
+			</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>0</SelectionIdentifier>
+						<Text>Yes, the follow-up tweet conforms to the task description.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>No, the follow-up tweet does not conform to the task description.</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>4</QuestionIdentifier>
+		<QuestionContent>
+			<Title>Question 5</Title>
+			<Text>
+				Does the provided follow-up tweet conform to the task description?
+
+				Context tweet: &quot;Ain't nothing to talk about on a plane. I'm tryna pretend I'm not that high in the air, talking would distract me.&quot;
+				Expected lifetime: 2-6 hours
+				Follow-up with decreased lifetime: &quot;Least it's only a short domestic flight, I couldn't handle being up here for long.&quot;
+			</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>0</SelectionIdentifier>
+						<Text>Yes, the follow-up tweet conforms to the task description.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>No, the follow-up tweet does not conform to the task description.</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>5</QuestionIdentifier>
+		<QuestionContent>
+			<Title>Question 6</Title>
+			<Text>
+				For the provided context- and follow-up tweet pair, select an appropriate updated lifetime estimate from the options below.
+
+				Context tweet: &quot;Thursday pub quiz later. Looking like a Big Coat kind of evening despite the forecast suggesting it'd be slightly milder out.&quot;
+				Expected lifetime: More than 6 hours
+				Follow-up with increased lifetime: &quot;I can't believe they moved the pub quiz to Friday over some snow. Ridiculous.&quot;
+				(New) expected lifetime:
+			</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>0</SelectionIdentifier>
+						<Text>More than 6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>1-3 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>1-4 weeks</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>6</QuestionIdentifier>
+		<QuestionContent>
+			<Title>Question 7</Title>
+			<Text>
+				For the provided context- and follow-up tweet pair, select an appropriate updated lifetime estimate from the options below.
+
+				Context tweet: &quot;Turning off my phone because i want a peaceful night for once.&quot;
+				Expected lifetime: More than 6 hours
+				Follow-up with decreased lifetime: &quot;Didn't even last an hour until my wife started complaining that we need to have it turned on for emergencies...&quot;
+				(New) expected lifetime: ???
+			</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>0</SelectionIdentifier>
+						<Text>45 minutes - 2 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>2-6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>more than 6 hours</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>7</QuestionIdentifier>
+		<QuestionContent>
+			<Title>Question 8</Title>
+			<Text>
+				For the provided context- and follow-up tweet pair, select an appropriate updated lifetime estimate from the options below.
+
+				Context tweet: &quot;Today is self care Sunday I'll get me my wax and pedi&quot;
+				Expected lifetime: More than 6 hours
+				Follow-up with increased lifetime: &quot;Studio closed today because of COVID...they won't be open until Friday, so I guess I'll be going then...&quot;
+				(New) expected lifetime: ???
+			</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>0</SelectionIdentifier>
+						<Text>1-3 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>3-7 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>1-4 weeks</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>8</QuestionIdentifier>
+		<QuestionContent>
+			<Title>Question 9</Title>
+			<Text>
+				For the provided context- and follow-up tweet pair, select an appropriate updated lifetime estimate from the options below.
+
+				Context tweet: &quot;Can't wait to dig into an crab boil laterrr today I've been feeningggg&quot;
+				Expected lifetime: 2-6 hours
+				Follow-up with increased lifetime: &quot;Heading to the store later to pick up the ingredients for my crab boil. Don't think I'll be able to make it tonight though..&quot;
+				(New) expected lifetime: ???
+			</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>0</SelectionIdentifier>
+						<Text>More than 6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>1-3 days</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>9</QuestionIdentifier>
+		<QuestionContent>
+			<Title>Question 10</Title>
+			<Text>
+				For the provided context- and follow-up tweet pair, select an appropriate updated lifetime estimate from the options below.
+
+				Context tweet: &quot;Gonna take a bath then maybe going out for lunch at that fancy place with the hubby&quot;
+				Expected lifetime: 2-6 hours
+				Follow-up with decreased lifetime: &quot;Lunch is off, hubby has to work an afternoon shift :(&quot;
+				(New) expected lifetime: ???
+			</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>0</SelectionIdentifier>
+						<Text>less than one minute</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>1-5 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>15-45 minutes</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+</QuestionForm>

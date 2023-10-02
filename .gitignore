@@ -1,0 +1,7 @@
+.idea/
+datasets/
+models/
+venv/
+__pycache__/
+lightning_logs/
+.env

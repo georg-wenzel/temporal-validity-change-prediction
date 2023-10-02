@@ -1,0 +1,1342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuestionForm xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd">
+	<Overview>
+		<Title>Tweet Lifetime Estimation Qualification</Title>
+		<Text>
+			This test will evaluate your understanding of the tweet lifetime estimation task.
+			To work on this task, first read the instructions below, which are taken from the HIT itself, then correctly evaluate the sample tweets.
+			The test will be scored automatically. You will be able to immediately work on the HIT if you score high enough.
+			The test contains 20 samples. The average classification time for a single tweet is around 9-10 seconds.
+		</Text>
+		<FormattedContent><![CDATA[
+			Note that distinguishing between tweets with and without time-sensitive information is a vital part of this task. <br />
+			<strong>You should expect tweets with no time-sensitive information to occur regularly both in the qualification test and the HIT itself.</strong>
+			]]></FormattedContent>
+		<Title>Task</Title>
+		<FormattedContent><![CDATA[
+                <p>
+                    The goal of this task is to gather commonsense judgments about the duration of relevance for actions and events commonly discussed on social media.
+                    For each tweet, your task is to <strong>determine how long the information within the tweet remains relevant after its publication</strong>.
+                    First, read the tweet carefully and consider what information it is trying to convey.
+                    Then, classify the lifetime of information in the tweet from the time of its publication.
+                    In other words, imagine you are a user interested in the tweet's information.
+                    The lifetime of information is the period during which you would consider the tweet timely and relevant.
+                    For example, a tweet like &quot;<em>Check out the circus, coming to town this weekend only!</em>&quot; would have a lifespan of &quot;3-7 days&quot; (specifically, until the end of the week).
+                    If someone were to read this tweet a few weeks after it was posted, the information would have lost its value.
+                </p>
+		]]></FormattedContent>
+		<Title>
+			Guidelines
+		</Title>
+		<FormattedContent><![CDATA[
+    			A tweet can be considered to have &quot;no time-sensitive information&quot; in the following cases:
+    			<ul>
+    				<li>The tweet contains information that is not expected to change over time (e.g., &quot;<em>My name is Georg.</em>&quot; or &quot;<em>Japan lies in Asia.</em>&quot;).</li>
+    				<li>The tweet contains no information at all (e.g., &quot;<em>Dartsssss</em>&quot; or &quot;<em>Endless.</em>&quot;).</li>
+    				<li>The tweet contains information that is fully contained in the past (e.g., &quot;<em>I slept for 10 hours.</em>&quot;). This <strong>also applies</strong> if such a statement is tied to a temporal expression (e.g., &quot;<em>I slept for 10 hours yesterday.</em>&quot;). In this case, despite the statement being tied to the current day due to the expression &quot;<em>yesterday</em>&quot;, since the actual information is fully contained in the past (and the action is already fully completed), the sentence is considered to have no time-sensitive information. This is because a statement about past actions or events is considered to always remain true.</li>
+    			</ul>
+		]]></FormattedContent>
+		<FormattedContent><![CDATA[
+        			Further guidelines:
+        			<ul>
+        				<li>Do not use real-world knowledge (i.e., contextual knowledge about entities or events that is not stated in the tweet itself) to reason about when information becomes outdated. For example, for the sentence &quot;<em>The world cup finals are coming up.</em>&quot;, do not consider the actual date of the next world cup finals, but rather consider how far before the finals of any given world cup someone would be expected to post this tweet.</li>
+        				<li>Assume the content of the tweet is truthful. For example, for the sentence &quot;<em>I am going to meet the queen.</em>&quot;, do not consider the actual likelihood of this event occurring or real-life circumstances which cause this particular event to be impossible, but instead, assume that information in the tweet holds true and that events are expected to occur.</li>
+        			</ul>
+		]]></FormattedContent>
+		<Title>
+			Examples
+		</Title>
+		<FormattedContent><![CDATA[
+			<p>
+    			Tweet: <em> This breakfast was pretty bad, but at least I'm going out for dinner tonight.</em><br />
+    			Classification: More than 6 hours<br />
+    			<small> Comment: As the user mentions breakfast, we can assume this tweet was written early in the day. Without this context, &quot;2-6 hours&quot; would also be acceptable.</small>
+			</p>
+			<p>
+    			Tweet: <em> I hate Thursdays.</em><br />
+    			Classification: No time-sensitive information<br />
+    			<small> Comment: The tweet is phrased in a way that implies it is a recurring feeling and not limited to the current week. Thus, we do not expect this sentiment to change.</small>
+			</p>
+			<p>
+    			Tweet: <em> I just want to finish getting all of my tattoos so badly, but I have more important things to spend money on right now.</em><br />
+    			Classification: More than one month<br />
+    			<small> Comment: Note the user's intent to finish getting their tattoos, which indicates that the tweet contains time-sensitive information. However, the tweet indicates that this change is not expected to occur soon.</small>
+			</p>
+			<p>
+				Tweet: <em> Traffic is terrible on Main Street right now!</em><br />
+				Classification: 15-45 minutes<br />
+				<small>Comment: &quot;5-15 minutes&quot; could also be an acceptable classification in this instance. Here, choose the option that feels more intuitive to you.</small>
+			</p>
+			<p>
+				Tweet: <em>The gym is offering a free trial membership for new members this month.</em><br />
+				Classification: 1-4 weeks<br />
+				<small>Comment: Technically, a month can last for more than 4 weeks. However, the more likely and intuitive answer should be chosen here.</small>
+			</p>
+		]]></FormattedContent>
+		<Title>
+			Qualification Test
+		</Title>
+		<Text>
+			To obtain the qualification, accurately classify the lifetime of information in the following tweets according to the task description above.
+		</Text>
+	</Overview>
+	<Question>
+		<QuestionIdentifier>1</QuestionIdentifier>
+		<QuestionContent>
+			<Title>Tweet 1</Title>
+			<Text>&quot;It's actually gonna be cold on Christmas in Texas&quot;</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>0</SelectionIdentifier>
+						<Text>This tweet contains no time-sensitive information.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>Less than one minute</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>1-5 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>3</SelectionIdentifier>
+						<Text>5-15 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>4</SelectionIdentifier>
+						<Text>15-45 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>5</SelectionIdentifier>
+						<Text>45 minutes - 2 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>6</SelectionIdentifier>
+						<Text>2-6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>7</SelectionIdentifier>
+						<Text>More than 6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>8</SelectionIdentifier>
+						<Text>1-3 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>9</SelectionIdentifier>
+						<Text>3-7 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>10</SelectionIdentifier>
+						<Text>1-4 weeks</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>11</SelectionIdentifier>
+						<Text>More than one month</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>2</QuestionIdentifier>
+		<QuestionContent>
+			<Title>Tweet 2</Title>
+			<Text>&quot;Lurking on twitter reading tweets of people and not interacting cause ive been away for too long and my loner self does not want to cooperate&quot;</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>0</SelectionIdentifier>
+						<Text>This tweet contains no time-sensitive information.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>Less than one minute</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>1-5 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>3</SelectionIdentifier>
+						<Text>5-15 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>4</SelectionIdentifier>
+						<Text>15-45 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>5</SelectionIdentifier>
+						<Text>45 minutes - 2 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>6</SelectionIdentifier>
+						<Text>2-6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>7</SelectionIdentifier>
+						<Text>More than 6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>8</SelectionIdentifier>
+						<Text>1-3 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>9</SelectionIdentifier>
+						<Text>3-7 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>10</SelectionIdentifier>
+						<Text>1-4 weeks</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>11</SelectionIdentifier>
+						<Text>More than one month</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>3</QuestionIdentifier>
+		<QuestionContent>
+			<Title>Tweet 3</Title>
+			<Text>&quot;Before smart phones, I'd just lie in the dark with my thoughts.&quot;</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>0</SelectionIdentifier>
+						<Text>This tweet contains no time-sensitive information.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>Less than one minute</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>1-5 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>3</SelectionIdentifier>
+						<Text>5-15 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>4</SelectionIdentifier>
+						<Text>15-45 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>5</SelectionIdentifier>
+						<Text>45 minutes - 2 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>6</SelectionIdentifier>
+						<Text>2-6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>7</SelectionIdentifier>
+						<Text>More than 6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>8</SelectionIdentifier>
+						<Text>1-3 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>9</SelectionIdentifier>
+						<Text>3-7 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>10</SelectionIdentifier>
+						<Text>1-4 weeks</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>11</SelectionIdentifier>
+						<Text>More than one month</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>12</QuestionIdentifier>
+		<QuestionContent>
+			<Title>Tweet 4</Title>
+			<Text>&quot;I swear the edibles be having me floating i been smiling for no reason watching this show&quot;</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>0</SelectionIdentifier>
+						<Text>This tweet contains no time-sensitive information.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>Less than one minute</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>1-5 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>3</SelectionIdentifier>
+						<Text>5-15 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>4</SelectionIdentifier>
+						<Text>15-45 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>5</SelectionIdentifier>
+						<Text>45 minutes - 2 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>6</SelectionIdentifier>
+						<Text>2-6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>7</SelectionIdentifier>
+						<Text>More than 6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>8</SelectionIdentifier>
+						<Text>1-3 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>9</SelectionIdentifier>
+						<Text>3-7 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>10</SelectionIdentifier>
+						<Text>1-4 weeks</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>11</SelectionIdentifier>
+						<Text>More than one month</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>4</QuestionIdentifier>
+		<QuestionContent>
+			<Title>Tweet 5</Title>
+			<Text>&quot;Keep subscribing and showing love. Thanksss&quot;</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>0</SelectionIdentifier>
+						<Text>This tweet contains no time-sensitive information.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>Less than one minute</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>1-5 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>3</SelectionIdentifier>
+						<Text>5-15 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>4</SelectionIdentifier>
+						<Text>15-45 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>5</SelectionIdentifier>
+						<Text>45 minutes - 2 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>6</SelectionIdentifier>
+						<Text>2-6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>7</SelectionIdentifier>
+						<Text>More than 6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>8</SelectionIdentifier>
+						<Text>1-3 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>9</SelectionIdentifier>
+						<Text>3-7 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>10</SelectionIdentifier>
+						<Text>1-4 weeks</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>11</SelectionIdentifier>
+						<Text>More than one month</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>5</QuestionIdentifier>
+		<QuestionContent>
+			<Title>Tweet 6</Title>
+			<Text>&quot;with your love nobody can drag me down&quot;</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>0</SelectionIdentifier>
+						<Text>This tweet contains no time-sensitive information.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>Less than one minute</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>1-5 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>3</SelectionIdentifier>
+						<Text>5-15 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>4</SelectionIdentifier>
+						<Text>15-45 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>5</SelectionIdentifier>
+						<Text>45 minutes - 2 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>6</SelectionIdentifier>
+						<Text>2-6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>7</SelectionIdentifier>
+						<Text>More than 6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>8</SelectionIdentifier>
+						<Text>1-3 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>9</SelectionIdentifier>
+						<Text>3-7 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>10</SelectionIdentifier>
+						<Text>1-4 weeks</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>11</SelectionIdentifier>
+						<Text>More than one month</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>6</QuestionIdentifier>
+		<QuestionContent>
+			<Title>Tweet 7</Title>
+			<Text>&quot;I needa go to the store grab a few things for me and my baby&quot;</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>0</SelectionIdentifier>
+						<Text>This tweet contains no time-sensitive information.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>Less than one minute</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>1-5 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>3</SelectionIdentifier>
+						<Text>5-15 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>4</SelectionIdentifier>
+						<Text>15-45 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>5</SelectionIdentifier>
+						<Text>45 minutes - 2 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>6</SelectionIdentifier>
+						<Text>2-6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>7</SelectionIdentifier>
+						<Text>More than 6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>8</SelectionIdentifier>
+						<Text>1-3 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>9</SelectionIdentifier>
+						<Text>3-7 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>10</SelectionIdentifier>
+						<Text>1-4 weeks</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>11</SelectionIdentifier>
+						<Text>More than one month</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>7</QuestionIdentifier>
+		<QuestionContent>
+			<Title>Tweet 8</Title>
+			<Text>&quot;On some days my bed is still made when I wake up... like just the little spot I was sleeping in is unmade. Love that.&quot;</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>0</SelectionIdentifier>
+						<Text>This tweet contains no time-sensitive information.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>Less than one minute</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>1-5 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>3</SelectionIdentifier>
+						<Text>5-15 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>4</SelectionIdentifier>
+						<Text>15-45 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>5</SelectionIdentifier>
+						<Text>45 minutes - 2 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>6</SelectionIdentifier>
+						<Text>2-6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>7</SelectionIdentifier>
+						<Text>More than 6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>8</SelectionIdentifier>
+						<Text>1-3 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>9</SelectionIdentifier>
+						<Text>3-7 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>10</SelectionIdentifier>
+						<Text>1-4 weeks</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>11</SelectionIdentifier>
+						<Text>More than one month</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>17</QuestionIdentifier>
+		<QuestionContent>
+			<Title>Tweet 9</Title>
+			<Text>&quot;The squirrels are taunting my dog and it's kinda cute.&quot;</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>0</SelectionIdentifier>
+						<Text>This tweet contains no time-sensitive information.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>Less than one minute</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>1-5 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>3</SelectionIdentifier>
+						<Text>5-15 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>4</SelectionIdentifier>
+						<Text>15-45 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>5</SelectionIdentifier>
+						<Text>45 minutes - 2 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>6</SelectionIdentifier>
+						<Text>2-6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>7</SelectionIdentifier>
+						<Text>More than 6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>8</SelectionIdentifier>
+						<Text>1-3 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>9</SelectionIdentifier>
+						<Text>3-7 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>10</SelectionIdentifier>
+						<Text>1-4 weeks</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>11</SelectionIdentifier>
+						<Text>More than one month</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>8</QuestionIdentifier>
+		<QuestionContent>
+			<Title>Tweet 10</Title>
+			<Text>&quot;when im alone and theres no one to distract me thats when im at my lowest.&quot;</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>0</SelectionIdentifier>
+						<Text>This tweet contains no time-sensitive information.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>Less than one minute</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>1-5 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>3</SelectionIdentifier>
+						<Text>5-15 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>4</SelectionIdentifier>
+						<Text>15-45 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>5</SelectionIdentifier>
+						<Text>45 minutes - 2 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>6</SelectionIdentifier>
+						<Text>2-6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>7</SelectionIdentifier>
+						<Text>More than 6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>8</SelectionIdentifier>
+						<Text>1-3 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>9</SelectionIdentifier>
+						<Text>3-7 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>10</SelectionIdentifier>
+						<Text>1-4 weeks</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>11</SelectionIdentifier>
+						<Text>More than one month</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>9</QuestionIdentifier>
+		<QuestionContent>
+			<Title>Tweet 11</Title>
+			<Text>&quot;The Starbucks employee told me she liked my makeup, but I hadn't worn makeup in days&quot;</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>0</SelectionIdentifier>
+						<Text>This tweet contains no time-sensitive information.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>Less than one minute</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>1-5 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>3</SelectionIdentifier>
+						<Text>5-15 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>4</SelectionIdentifier>
+						<Text>15-45 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>5</SelectionIdentifier>
+						<Text>45 minutes - 2 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>6</SelectionIdentifier>
+						<Text>2-6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>7</SelectionIdentifier>
+						<Text>More than 6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>8</SelectionIdentifier>
+						<Text>1-3 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>9</SelectionIdentifier>
+						<Text>3-7 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>10</SelectionIdentifier>
+						<Text>1-4 weeks</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>11</SelectionIdentifier>
+						<Text>More than one month</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>19</QuestionIdentifier>
+		<QuestionContent>
+			<Title>Tweet 12</Title>
+			<Text>&quot;Not my laptop being dead the last day of class&quot;</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>0</SelectionIdentifier>
+						<Text>This tweet contains no time-sensitive information.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>Less than one minute</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>1-5 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>3</SelectionIdentifier>
+						<Text>5-15 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>4</SelectionIdentifier>
+						<Text>15-45 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>5</SelectionIdentifier>
+						<Text>45 minutes - 2 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>6</SelectionIdentifier>
+						<Text>2-6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>7</SelectionIdentifier>
+						<Text>More than 6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>8</SelectionIdentifier>
+						<Text>1-3 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>9</SelectionIdentifier>
+						<Text>3-7 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>10</SelectionIdentifier>
+						<Text>1-4 weeks</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>11</SelectionIdentifier>
+						<Text>More than one month</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>10</QuestionIdentifier>
+		<QuestionContent>
+			<Title>Tweet 13</Title>
+			<Text>&quot;Just dealt with the 37th guy who didn't know how to write an e-mail. Okay rant over.&quot;</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>0</SelectionIdentifier>
+						<Text>This tweet contains no time-sensitive information.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>Less than one minute</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>1-5 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>3</SelectionIdentifier>
+						<Text>5-15 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>4</SelectionIdentifier>
+						<Text>15-45 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>5</SelectionIdentifier>
+						<Text>45 minutes - 2 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>6</SelectionIdentifier>
+						<Text>2-6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>7</SelectionIdentifier>
+						<Text>More than 6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>8</SelectionIdentifier>
+						<Text>1-3 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>9</SelectionIdentifier>
+						<Text>3-7 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>10</SelectionIdentifier>
+						<Text>1-4 weeks</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>11</SelectionIdentifier>
+						<Text>More than one month</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>11</QuestionIdentifier>
+		<QuestionContent>
+			<Title>Tweet 14</Title>
+			<Text>&quot;It's a birthday weekend!!!&quot;</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>0</SelectionIdentifier>
+						<Text>This tweet contains no time-sensitive information.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>Less than one minute</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>1-5 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>3</SelectionIdentifier>
+						<Text>5-15 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>4</SelectionIdentifier>
+						<Text>15-45 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>5</SelectionIdentifier>
+						<Text>45 minutes - 2 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>6</SelectionIdentifier>
+						<Text>2-6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>7</SelectionIdentifier>
+						<Text>More than 6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>8</SelectionIdentifier>
+						<Text>1-3 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>9</SelectionIdentifier>
+						<Text>3-7 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>10</SelectionIdentifier>
+						<Text>1-4 weeks</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>11</SelectionIdentifier>
+						<Text>More than one month</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>13</QuestionIdentifier>
+		<QuestionContent>
+			<Title>Tweet 15</Title>
+			<Text>&quot;I work in six hours and I aint went to sleep yet lol&quot;</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>0</SelectionIdentifier>
+						<Text>This tweet contains no time-sensitive information.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>Less than one minute</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>1-5 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>3</SelectionIdentifier>
+						<Text>5-15 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>4</SelectionIdentifier>
+						<Text>15-45 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>5</SelectionIdentifier>
+						<Text>45 minutes - 2 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>6</SelectionIdentifier>
+						<Text>2-6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>7</SelectionIdentifier>
+						<Text>More than 6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>8</SelectionIdentifier>
+						<Text>1-3 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>9</SelectionIdentifier>
+						<Text>3-7 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>10</SelectionIdentifier>
+						<Text>1-4 weeks</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>11</SelectionIdentifier>
+						<Text>More than one month</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>14</QuestionIdentifier>
+		<QuestionContent>
+			<Title>Tweet 16</Title>
+			<Text>&quot;Todays gunna be a long day&quot;</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>0</SelectionIdentifier>
+						<Text>This tweet contains no time-sensitive information.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>Less than one minute</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>1-5 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>3</SelectionIdentifier>
+						<Text>5-15 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>4</SelectionIdentifier>
+						<Text>15-45 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>5</SelectionIdentifier>
+						<Text>45 minutes - 2 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>6</SelectionIdentifier>
+						<Text>2-6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>7</SelectionIdentifier>
+						<Text>More than 6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>8</SelectionIdentifier>
+						<Text>1-3 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>9</SelectionIdentifier>
+						<Text>3-7 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>10</SelectionIdentifier>
+						<Text>1-4 weeks</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>11</SelectionIdentifier>
+						<Text>More than one month</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>15</QuestionIdentifier>
+		<QuestionContent>
+			<Title>Tweet 17</Title>
+			<Text>&quot;Like seriously AI has taken over... Dey play&quot;</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>0</SelectionIdentifier>
+						<Text>This tweet contains no time-sensitive information.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>Less than one minute</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>1-5 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>3</SelectionIdentifier>
+						<Text>5-15 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>4</SelectionIdentifier>
+						<Text>15-45 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>5</SelectionIdentifier>
+						<Text>45 minutes - 2 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>6</SelectionIdentifier>
+						<Text>2-6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>7</SelectionIdentifier>
+						<Text>More than 6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>8</SelectionIdentifier>
+						<Text>1-3 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>9</SelectionIdentifier>
+						<Text>3-7 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>10</SelectionIdentifier>
+						<Text>1-4 weeks</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>11</SelectionIdentifier>
+						<Text>More than one month</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>16</QuestionIdentifier>
+		<QuestionContent>
+			<Title>Tweet 18</Title>
+			<Text>&quot;Molly and I honestly have the craziest mornings at work together&quot;</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>0</SelectionIdentifier>
+						<Text>This tweet contains no time-sensitive information.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>Less than one minute</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>1-5 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>3</SelectionIdentifier>
+						<Text>5-15 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>4</SelectionIdentifier>
+						<Text>15-45 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>5</SelectionIdentifier>
+						<Text>45 minutes - 2 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>6</SelectionIdentifier>
+						<Text>2-6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>7</SelectionIdentifier>
+						<Text>More than 6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>8</SelectionIdentifier>
+						<Text>1-3 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>9</SelectionIdentifier>
+						<Text>3-7 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>10</SelectionIdentifier>
+						<Text>1-4 weeks</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>11</SelectionIdentifier>
+						<Text>More than one month</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>18</QuestionIdentifier>
+		<QuestionContent>
+			<Title>Tweet 19</Title>
+			<Text>&quot;i been laughing since i woke up&quot;</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>0</SelectionIdentifier>
+						<Text>This tweet contains no time-sensitive information.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>Less than one minute</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>1-5 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>3</SelectionIdentifier>
+						<Text>5-15 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>4</SelectionIdentifier>
+						<Text>15-45 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>5</SelectionIdentifier>
+						<Text>45 minutes - 2 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>6</SelectionIdentifier>
+						<Text>2-6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>7</SelectionIdentifier>
+						<Text>More than 6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>8</SelectionIdentifier>
+						<Text>1-3 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>9</SelectionIdentifier>
+						<Text>3-7 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>10</SelectionIdentifier>
+						<Text>1-4 weeks</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>11</SelectionIdentifier>
+						<Text>More than one month</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>20</QuestionIdentifier>
+		<QuestionContent>
+			<Title>Tweet 20</Title>
+			<Text>&quot;Really wish I can see coldplay&quot;</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>0</SelectionIdentifier>
+						<Text>This tweet contains no time-sensitive information.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>Less than one minute</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>1-5 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>3</SelectionIdentifier>
+						<Text>5-15 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>4</SelectionIdentifier>
+						<Text>15-45 minutes</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>5</SelectionIdentifier>
+						<Text>45 minutes - 2 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>6</SelectionIdentifier>
+						<Text>2-6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>7</SelectionIdentifier>
+						<Text>More than 6 hours</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>8</SelectionIdentifier>
+						<Text>1-3 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>9</SelectionIdentifier>
+						<Text>3-7 days</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>10</SelectionIdentifier>
+						<Text>1-4 weeks</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>11</SelectionIdentifier>
+						<Text>More than one month</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+</QuestionForm>

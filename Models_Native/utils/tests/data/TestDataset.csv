@@ -1,0 +1,13 @@
+context,follow_up,context_only_tv,combined_tv,change
+"Context Statement 2","Decreased Follow-Up",4,3,decreased
+"Context Statement 2","Neutral Follow-Up",4,4,neutral
+"Context Statement 2","Increased Follow-Up",4,7,increased
+"Context Statement 1","Decreased Follow-Up",4,2,decreased
+"Context Statement 1","Neutral Follow-Up",4,4,neutral
+"Context Statement 1","Increased Follow-Up",4,6,increased
+"Context Statement 4","Decreased Follow-Up",4,3,decreased
+"Context Statement 4","Neutral Follow-Up",4,4,neutral
+"Context Statement 4","Increased Follow-Up",4,5,increased
+"Context Statement 3","Decreased Follow-Up",4,1,decreased
+"Context Statement 3","Neutral Follow-Up",4,4,neutral
+"Context Statement 3","Increased Follow-Up",4,8,increased
