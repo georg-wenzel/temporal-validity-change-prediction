@@ -1,4 +1,8 @@
 # Temporal Validity Change Prediction (TVCP)
+## !!DISCLAIMERS!!
+- GitHub Copilot was used for minor coding assistance (code completion) in this repository. The produced code was always manually evaluated by the developer to ensure it is sensible and works as intended.
+- This is a research project. The publicized code and data and its derivatives should only be used for research contexts. Please refer to our article "Temporal Validity Change Prediction" (Section: Conclusion) for further details on the intended use.
+
 
 ## !!PUBLIC REPOSITORY NOTICE!!
 This repository is a public version of the original repository. Due to Twitter's developer terms, we may not share 
