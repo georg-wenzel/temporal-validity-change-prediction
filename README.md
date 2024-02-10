@@ -14,7 +14,7 @@ the original dataset publicly. Thus, the following files/directories are not ava
 - `data/dataset.csv`
 - `data/dataset_splits/`
 - `data/dataset_processing/`
-- `data/model_eval/chatgpt/`
+- `data/model_eval/LLM/`
 - `data/model_eval/semantic_eval/output.csv`
 - `data/qualitative_analysis.xlsx`
 - `mturk_results/`
@@ -90,11 +90,11 @@ process of these models in the `Models_Native` directory. This directory contain
 types of models, as well as a utils package with shared code such as model structures, evaluation loops, and other utility 
 functions. More detail on the models and training process can be found in the paper. 
 
-The directory `data/model_eval` contains .pkl files with data on the training process for most models (e.g., training and 
-validation loss over epochs and final evaluation metrics on the test set). The exception is ChatGPT, for which we only store 
+The directory `data/model_eval` contains .pkl files with data on the training process for any fine-tuned models (e.g., training and 
+validation loss over epochs and final evaluation metrics on the test set). For LLMs, we only store 
 the generated results in .csv files, as there is no specific training process, and we prompt in a few-shot setting.
 
-We further analyze the best-performing model (SelfExplain) with- and without the multitask loss, and compare the results with ChatGPT.
-We choose ChatGPT both due to its general current presence in NLP, and because these two models are the only ones that produce 
-some sort of explainability. In this notebook, we also test statistical significance of the results produced by the multitask loss.
+We further analyze the best-performing model (SelfExplain) with- and without the multitask loss, and compare the results with GPT-3.5-turbo.
+We choose GPT-3.5-turbo both due to its general current presence in NLP, and because it achieved the highest EM score out of all prompted LLMs. 
+In this notebook, we also test statistical significance of the results produced by the multitask loss.
 This notebook is stored at `MAIN_SemanticEvaluation.ipynb`.
